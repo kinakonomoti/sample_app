@@ -9,6 +9,10 @@
   </span>
 
  <p>画像</p>
- <%= image_tag list.image, size: "200×200" %>
+ <% if list.image.present? %>
+  <%= image_tag list.image, size: "200×200" %>
+<% else %>
+  <p>画像がありません</p>
+<% end %>
 
 <% end %>
